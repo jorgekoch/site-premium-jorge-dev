@@ -1,73 +1,32 @@
-# React + TypeScript + Vite
+como usar esse projeto no futuro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Agora vem a parte mais importante.
+Sempre que for criar um novo site:
 
-Currently, two official plugins are available:
+Opção A (mais simples)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+git clone https://github.com/seu-usuario/starter-kit-sites-premium.git nome-do-projeto
+Depois:
 
-## React Compiler
+cd nome-do-projeto
+npm install
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Opção B (PRO nível — recomendo)
+Use como template do GitHub:
+Vá no repositório
+Clique em: 👉 "Use this template"
+Isso cria um projeto novo já limpo.
 
-## Expanding the ESLint configuration
+limpar histórico (muito importante)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Quando criar um novo projeto, faça:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+rm -rf .git
+git init
+git add .
+git commit -m "init: projeto cliente X"
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Assim:
+você não leva histórico antigo
+cada projeto começa limpo
