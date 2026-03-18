@@ -1,4 +1,15 @@
-export const faqData = {
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type FaqData = {
+  home: FaqItem[];
+  services: FaqItem[];
+  contact: FaqItem[];
+};
+
+export const faqData: FaqData = {
   home: [
     {
       question: "Essa base serve para diferentes tipos de clientes?",

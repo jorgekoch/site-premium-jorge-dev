@@ -6,6 +6,31 @@ import { Button } from "../ui/Button";
 import { SectionHeader } from "./SectionHeader";
 import { media } from "../../styles/breakpoints";
 
+type ServiceItem = {
+  tag?: string;
+  title: string;
+  description?: string;
+  bullets?: string[];
+  cta?: {
+    label: string;
+    to: string;
+    variant?: "primary" | "ghost";
+  };
+};
+
+type SectionCta = {
+  label: string;
+  to: string;
+};
+
+type ServiceSectionBaseProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  items?: ServiceItem[];
+  cta?: SectionCta;
+};
+
 const Section = styled.section`
   padding: 1rem 0 4rem;
 
@@ -99,15 +124,11 @@ export function ServiceSectionBase({
   description = "Use esta seção para destacar seus principais serviços, modalidades ou áreas de atuação.",
   items = [],
   cta,
-}) {
+}: ServiceSectionBaseProps) {
   return (
     <Section>
       <Container>
-        <SectionHeader
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
+        <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 
         <Grid>
           {items.map((item, index) => (
@@ -115,17 +136,15 @@ export function ServiceSectionBase({
               {item.tag && <Tag>{item.tag}</Tag>}
               <Title>{item.title}</Title>
 
-              {item.description && (
-                <Description>{item.description}</Description>
-              )}
+              {item.description && <Description>{item.description}</Description>}
 
-              {item.bullets?.length > 0 && (
+              {item.bullets?.length ? (
                 <BulletList>
                   {item.bullets.map((bullet, bulletIndex) => (
                     <Bullet key={bulletIndex}>{bullet}</Bullet>
                   ))}
                 </BulletList>
-              )}
+              ) : null}
 
               {item.cta && (
                 <ActionRow>

@@ -5,6 +5,27 @@ import { Tag } from "../ui/Tag";
 import { SectionHeader } from "./SectionHeader";
 import { media } from "../../styles/breakpoints";
 
+type GalleryItem = {
+  tag?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  link?: {
+    label: string;
+    href: string;
+    target?: string;
+    rel?: string;
+  };
+};
+
+type GallerySectionBaseProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  items?: GalleryItem[];
+};
+
 const Section = styled.section`
   padding: 1rem 0 4rem;
 
@@ -107,15 +128,11 @@ export function GallerySectionBase({
   title = "Uma estrutura para apresentar imagens, projetos ou portfólio",
   description = "Use esta seção para mostrar trabalhos, registros visuais, fotos profissionais ou qualquer material que ajude a reforçar sua proposta.",
   items = [],
-}) {
+}: GallerySectionBaseProps) {
   return (
     <Section>
       <Container>
-        <SectionHeader
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
+        <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 
         <Grid>
           {items.map((item, index) => (
@@ -131,9 +148,7 @@ export function GallerySectionBase({
               <Content>
                 {item.tag && <Tag>{item.tag}</Tag>}
                 {item.title && <Title>{item.title}</Title>}
-                {item.description && (
-                  <Description>{item.description}</Description>
-                )}
+                {item.description && <Description>{item.description}</Description>}
                 {item.link && (
                   <Link
                     href={item.link.href}

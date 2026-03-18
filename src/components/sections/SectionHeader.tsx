@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+type SectionHeaderProps = {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+};
+
 const Wrapper = styled.div`
   display: grid;
   gap: 0.8rem;
@@ -31,7 +37,11 @@ const Description = styled.p`
   line-height: 1.8;
 `;
 
-export function SectionHeader({ eyebrow, title, description }) {
+export function SectionHeader({
+  eyebrow,
+  title,
+  description,
+}: SectionHeaderProps) {
   return (
     <Wrapper>
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}

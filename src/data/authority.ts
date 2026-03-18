@@ -1,4 +1,15 @@
-export const authorityData = {
+export type AuthorityItem = {
+  value: string;
+  title: string;
+  text: string;
+};
+
+export type AuthorityData = {
+  home: AuthorityItem[];
+  about: AuthorityItem[];
+};
+
+export const authorityData: AuthorityData = {
   home: [
     {
       value: "Visual premium",

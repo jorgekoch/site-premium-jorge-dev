@@ -8,7 +8,7 @@ import { media } from "../../styles/breakpoints";
 const Wrapper = styled.aside`
   display: none;
 
-  @media (min-width: 1024px) {
+  @media ${media.laptop} {
     display: flex;
     flex-direction: column;
     width: ${({ theme }) => theme.layout.sidebarWidth};
@@ -38,7 +38,11 @@ const BrandBadge = styled.div`
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, #6d45d8);
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.colors.primary},
+    #6d45d8
+  );
   color: ${({ theme }) => theme.colors.primaryContrast};
   display: grid;
   place-items: center;
@@ -118,11 +122,10 @@ export function Sidebar() {
       </Top>
 
       <Bottom>
-        <BottomText>
-          Estrutura moderna, visual profissional e foco total em clareza e conversão.
-        </BottomText>
-
-        <Button to="/contato">{siteConfig.cta.label}</Button>
+        <BottomText>{siteConfig.footer.note}</BottomText>
+        <Button to={siteConfig.cta.primaryTo}>
+          {siteConfig.cta.primaryLabel}
+        </Button>
       </Bottom>
     </Wrapper>
   );

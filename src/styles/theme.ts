@@ -63,3 +63,5 @@ export const theme = {
     default: "0.25s ease",
   },
 };
+
+export type AppTheme = typeof theme;

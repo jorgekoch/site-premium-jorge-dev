@@ -1,4 +1,25 @@
-export const homeData = {
+export type HighlightItem = {
+  title: string;
+  text: string;
+};
+
+export type FinalCtaData = {
+  eyebrow: string;
+  title: string;
+  description: string;
+};
+
+export type HomeData = {
+  hero: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    highlights: HighlightItem[];
+  };
+  finalCta: FinalCtaData;
+};
+
+export const homeData: HomeData = {
   hero: {
     eyebrow: "Serviço profissional",
     title: "Título principal do site",

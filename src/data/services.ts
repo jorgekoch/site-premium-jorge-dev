@@ -1,4 +1,34 @@
-export const servicesData = {
+export type ServiceItem = {
+  tag?: string;
+  title: string;
+  description?: string;
+  bullets?: string[];
+  cta?: {
+    label: string;
+    to: string;
+    variant?: "primary" | "ghost";
+  };
+};
+
+export type ServicesData = {
+  section: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  items: ServiceItem[];
+  sectionCta: {
+    label: string;
+    to: string;
+  };
+  finalCta: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+};
+
+export const servicesData: ServicesData = {
   section: {
     eyebrow: "Serviços",
     title: "Soluções pensadas para criar sites mais profissionais e estratégicos",

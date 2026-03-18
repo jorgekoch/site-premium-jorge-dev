@@ -61,7 +61,7 @@ const MenuButton = styled.button`
   cursor: pointer;
 `;
 
-const Overlay = styled.button`
+const Overlay = styled.button<{ $open: boolean }>`
   position: fixed;
   inset: ${({ theme }) => theme.layout.mobileTopbarHeight} 0 0 0;
   z-index: 98;
@@ -76,7 +76,7 @@ const Overlay = styled.button`
   }
 `;
 
-const MenuPanel = styled.div`
+const MenuPanel = styled.div<{ $open: boolean }>`
   position: fixed;
   top: ${({ theme }) => theme.layout.mobileTopbarHeight};
   left: 0;
@@ -148,7 +148,11 @@ const CtaLink = styled(NavLink)`
   box-shadow: ${({ theme }) => theme.shadow.glow};
 `;
 
-function HamburgerIcon({ open }) {
+type HamburgerIconProps = {
+  open: boolean;
+};
+
+function HamburgerIcon({ open }: HamburgerIconProps) {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       {open ? (

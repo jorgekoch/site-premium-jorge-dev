@@ -1,4 +1,26 @@
-export const aboutData = {
+export type AboutData = {
+  section: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  content: {
+    mainTag: string;
+    mainTitle: string;
+    paragraphs: string[];
+    bullets: string[];
+    sideTag: string;
+    sideTitle: string;
+    sideItems: string[];
+  };
+  finalCta: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+};
+
+export const aboutData: AboutData = {
   section: {
     eyebrow: "Sobre",
     title: "Uma estrutura para apresentar trajetória, proposta e diferenciais",

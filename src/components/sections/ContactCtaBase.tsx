@@ -3,6 +3,19 @@ import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 import { media } from "../../styles/breakpoints";
 
+type CtaLink = {
+  label: string;
+  to: string;
+};
+
+type ContactCtaBaseProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  primaryCta?: CtaLink;
+  secondaryCta?: CtaLink;
+};
+
 const Section = styled.section`
   padding: 1rem 0 5rem;
 `;
@@ -83,7 +96,7 @@ export function ContactCtaBase({
   description = "Use este bloco para convidar a pessoa a entrar em contato, solicitar orçamento ou iniciar o atendimento.",
   primaryCta = { label: "Entrar em contato", to: "/contato" },
   secondaryCta,
-}) {
+}: ContactCtaBaseProps) {
   return (
     <Section>
       <Container>
@@ -95,12 +108,7 @@ export function ContactCtaBase({
           </Content>
 
           <Actions>
-            {primaryCta && (
-              <Button to={primaryCta.to}>
-                {primaryCta.label}
-              </Button>
-            )}
-
+            {primaryCta && <Button to={primaryCta.to}>{primaryCta.label}</Button>}
             {secondaryCta && (
               <Button to={secondaryCta.to} variant="ghost">
                 {secondaryCta.label}

@@ -5,6 +5,22 @@ import { Tag } from "../ui/Tag";
 import { SectionHeader } from "./SectionHeader";
 import { media } from "../../styles/breakpoints";
 
+type AboutSectionBaseProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  mainTag?: string;
+  mainTitle?: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  sideTag?: string;
+  sideTitle?: string;
+  sideItems?: string[];
+  image?: string;
+  imageAlt?: string;
+  showImage?: boolean;
+};
+
 const Section = styled.section`
   padding: 1rem 0 4rem;
 
@@ -152,15 +168,11 @@ export function AboutSectionBase({
   image,
   imageAlt = "",
   showImage = true,
-}) {
+}: AboutSectionBaseProps) {
   return (
     <Section>
       <Container>
-        <SectionHeader
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
+        <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 
         <Grid>
           <Column>

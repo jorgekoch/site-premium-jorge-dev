@@ -1,4 +1,27 @@
-export const galleryData = {
+export type GalleryItem = {
+  tag?: string;
+  title?: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  link?: {
+    label: string;
+    href: string;
+    target?: string;
+    rel?: string;
+  };
+};
+
+export type GalleryData = {
+  section: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  items: GalleryItem[];
+};
+
+export const galleryData: GalleryData = {
   section: {
     eyebrow: "Galeria",
     title: "Um espaço para mostrar trabalhos, imagens e projetos",

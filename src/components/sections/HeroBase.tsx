@@ -3,6 +3,26 @@ import { Container } from "../ui/Container";
 import { Button } from "../ui/Button";
 import { media } from "../../styles/breakpoints";
 
+type HighlightItem = {
+  title: string;
+  text: string;
+};
+
+type CtaLink = {
+  label: string;
+  to: string;
+};
+
+type HeroBaseProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  primaryCta?: CtaLink;
+  secondaryCta?: CtaLink;
+  highlights?: HighlightItem[];
+  image?: string;
+};
+
 const Section = styled.section`
   position: relative;
   padding: 1.5rem 0 3.5rem;
@@ -174,25 +194,18 @@ export function HeroBase({
   secondaryCta,
   highlights = [],
   image,
-}) {
+}: HeroBaseProps) {
   return (
     <Section>
       <Container>
         <Grid>
           <Content>
             <Eyebrow>{eyebrow}</Eyebrow>
-
             <Title>{title}</Title>
-
             <Description>{description}</Description>
 
             <Actions>
-              {primaryCta && (
-                <Button to={primaryCta.to}>
-                  {primaryCta.label}
-                </Button>
-              )}
-
+              {primaryCta && <Button to={primaryCta.to}>{primaryCta.label}</Button>}
               {secondaryCta && (
                 <Button to={secondaryCta.to} variant="ghost">
                   {secondaryCta.label}
@@ -217,9 +230,7 @@ export function HeroBase({
               {image ? (
                 <VisualImage src={image} alt="" />
               ) : (
-                <Placeholder>
-                  Imagem do profissional / serviço
-                </Placeholder>
+                <Placeholder>Imagem do profissional / serviço</Placeholder>
               )}
             </VisualCard>
           </Visual>

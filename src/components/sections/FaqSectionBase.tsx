@@ -4,6 +4,18 @@ import { Card } from "../ui/Card";
 import { SectionHeader } from "./SectionHeader";
 import { media } from "../../styles/breakpoints";
 
+type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+type FaqSectionBaseProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  items?: FaqItem[];
+};
+
 const Section = styled.section`
   padding: 1rem 0 4rem;
 
@@ -42,15 +54,11 @@ export function FaqSectionBase({
   title = "Respostas que ajudam a reduzir dúvidas e aumentar confiança",
   description = "Use esta seção para responder perguntas comuns e tornar o próximo passo mais natural.",
   items = [],
-}) {
+}: FaqSectionBaseProps) {
   return (
     <Section>
       <Container>
-        <SectionHeader
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
+        <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 
         <Grid>
           {items.map((item, index) => (

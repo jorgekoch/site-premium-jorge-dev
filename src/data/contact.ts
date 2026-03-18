@@ -1,4 +1,20 @@
-export const contactPageData = {
+export type ContactPageData = {
+  section: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
+  direct: {
+    title: string;
+    text: string;
+  };
+  social: {
+    title: string;
+    text: string;
+  };
+};
+
+export const contactPageData: ContactPageData = {
   section: {
     eyebrow: "Contato",
     title: "Dê o próximo passo e inicie a conversa",
