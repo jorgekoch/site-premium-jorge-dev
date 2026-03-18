@@ -1,32 +1,21 @@
-como usar esse projeto no futuro
+# Starter Kit - Sites Profissionais
 
-Agora vem a parte mais importante.
-Sempre que for criar um novo site:
+## Como usar
 
-Opção A (mais simples)
+1. Clone o projeto
+2. Instale dependências
+3. Edite:
+   - src/config/site.ts
+   - src/data/*
+4. Rode o projeto
 
-git clone https://github.com/seu-usuario/starter-kit-sites-premium.git nome-do-projeto
-Depois:
+## Estrutura
 
-cd nome-do-projeto
-npm install
-npm run dev
+- components → UI e layout
+- sections → blocos reutilizáveis
+- data → conteúdo
+- config → dados globais
 
-Opção B (PRO nível — recomendo)
-Use como template do GitHub:
-Vá no repositório
-Clique em: 👉 "Use this template"
-Isso cria um projeto novo já limpo.
+## Objetivo
 
-limpar histórico (muito importante)
-
-Quando criar um novo projeto, faça:
-
-rm -rf .git
-git init
-git add .
-git commit -m "init: projeto cliente X"
-
-Assim:
-você não leva histórico antigo
-cada projeto começa limpo
+Criar sites modernos, rápidos e reutilizáveis para diferentes clientes.
