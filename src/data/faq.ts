@@ -12,24 +12,29 @@ export type FaqData = {
 export const faqData: FaqData = {
   home: [
     {
-      question: "Essa base serve para diferentes tipos de clientes?",
+      question: "Quanto custa um site?",
       answer:
-        "Sim. Ela foi pensada justamente para ser adaptada a vários nichos, trocando conteúdo, identidade visual e estrutura quando necessário.",
+        "O valor varia de acordo com o tipo de projeto. Existem opções mais simples, como landing pages, e projetos mais completos com foco em posicionamento e conversão. No contato inicial eu te ajudo a entender qual formato faz mais sentido para o seu caso.",
     },
     {
-      question: "Preciso usar todas as seções em todos os projetos?",
+      question: "Quanto tempo leva para ficar pronto?",
       answer:
-        "Não. Você pode montar páginas mais enxutas ou mais completas, dependendo da necessidade do cliente e do objetivo do site.",
+        "O prazo depende da complexidade do projeto, mas em geral varia entre alguns dias para projetos mais simples até algumas semanas para estruturas mais completas.",
     },
     {
-      question: "Posso usar isso também no meu próprio site?",
+      question: "O site funciona no celular?",
       answer:
-        "Sim. Essa é uma das melhores formas de validar o sistema antes de duplicar para novos projetos.",
+        "Sim. Todos os sites são desenvolvidos de forma responsiva, funcionando bem em celular, tablet e desktop.",
     },
     {
-      question: "Essa base já está pronta para crescer depois?",
+      question: "Preciso já ter tudo pronto antes de começar?",
       answer:
-        "Sim. Ela foi organizada para permitir refinamentos futuros, novas páginas, novas seções e personalizações com mais controle.",
+        "Não. Você pode entrar em contato mesmo sem ter tudo definido. Eu te ajudo a organizar as ideias e entender o melhor caminho para o seu site.",
+    },
+    {
+      question: "Você faz sites personalizados?",
+      answer:
+        "Sim. Cada projeto é adaptado ao objetivo, ao público e ao tipo de serviço do cliente, buscando sempre uma estrutura mais clara, profissional e eficiente.",
     },
   ],
 
@@ -37,45 +42,45 @@ export const faqData: FaqData = {
     {
       question: "Qual é a diferença entre landing page e site institucional?",
       answer:
-        "A landing page é mais enxuta e foca em uma ação principal. O site institucional organiza melhor conteúdos, serviços e informações em várias páginas.",
+        "A landing page é mais direta e focada em uma ação principal. Já o site institucional permite apresentar melhor serviços, informações e fortalecer o posicionamento da marca ou do profissional.",
     },
     {
-      question: "Esses formatos servem para qualquer nicho?",
+      question: "Como saber qual formato faz mais sentido para mim?",
       answer:
-        "Sim. A estrutura pode ser adaptada para diferentes profissionais e objetivos, com ajustes de conteúdo, identidade visual e organização das seções.",
+        "Isso depende do seu objetivo, da quantidade de conteúdo que você precisa mostrar e do nível de presença online que quer construir. No contato inicial eu posso te orientar sobre a melhor opção.",
     },
     {
-      question: "É possível começar com algo simples e melhorar depois?",
+      question: "Posso começar com algo mais simples e evoluir depois?",
       answer:
-        "Sim. Muitas vezes o melhor caminho é começar com uma base mais objetiva e evoluir o site conforme a necessidade do projeto cresce.",
+        "Sim. Muitas vezes esse é o melhor caminho. Você pode começar com uma estrutura mais enxuta e depois expandir conforme sua necessidade cresce.",
     },
     {
-      question: "O site funciona bem no celular?",
+      question: "O site já é entregue pronto para celular?",
       answer:
-        "Sim. A base já é pensada para funcionar de forma responsiva, com boa leitura e navegação em diferentes telas.",
+        "Sim. Todos os projetos são desenvolvidos de forma responsiva, funcionando bem em celular, tablet e desktop.",
     },
   ],
 
   contact: [
     {
-      question: "Preciso já ter tudo definido antes de entrar em contato?",
+      question: "Como funciona o primeiro contato?",
       answer:
-        "Não. O contato inicial também serve para entender melhor sua necessidade e orientar qual caminho faz mais sentido.",
+        "Você pode me chamar pelo WhatsApp e explicar sua ideia. A partir disso, eu te ajudo a entender qual formato de site faz mais sentido para o seu caso.",
+    },
+    {
+      question: "Preciso já ter tudo definido antes de falar com você?",
+      answer:
+        "Não. Você pode entrar em contato mesmo sem ter tudo organizado. O primeiro passo também serve para clarear as ideias.",
+    },
+    {
+      question: "Você atende projetos online?",
+      answer:
+        "Sim. Todo o processo pode ser feito online, de forma simples e organizada.",
     },
     {
       question: "Posso tirar dúvidas antes de decidir?",
       answer:
-        "Sim. A ideia é justamente tornar esse processo mais leve, direto e sem complicação.",
-    },
-    {
-      question: "O primeiro contato já gera compromisso?",
-      answer:
-        "Não necessariamente. Ele pode servir apenas para alinhar expectativas e entender melhor a proposta.",
-    },
-    {
-      question: "É possível adaptar a proposta ao meu objetivo?",
-      answer:
-        "Sim. Em muitos casos é possível ajustar a estrutura, o formato e a abordagem conforme a necessidade do projeto.",
+        "Claro. O objetivo do primeiro contato é justamente entender sua necessidade e te orientar sem complicação.",
     },
   ],
 };

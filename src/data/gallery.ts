@@ -1,3 +1,7 @@
+import arquivappImg from "../assets/projetos/projeto-arquivapp.jpg";
+import ianImg from "../assets/projetos/projeto-prof-ian.jpg";
+import codingImg from "../assets/projetos/coding.jpg";
+
 export type GalleryItem = {
   tag?: string;
   title?: string;
@@ -23,30 +27,44 @@ export type GalleryData = {
 
 export const galleryData: GalleryData = {
   section: {
-    eyebrow: "Galeria",
-    title: "Um espaço para mostrar trabalhos, imagens e projetos",
+    eyebrow: "Projetos",
+    title: "Projetos desenvolvidos com foco em clareza, usabilidade e apresentação profissional",
     description:
-      "Essa seção pode ser usada para apresentar portfólio, registros visuais, fotos profissionais ou qualquer conteúdo que fortaleça a sua presença online.",
+      "Aqui estão alguns projetos que mostram minha forma de pensar estrutura, interface e experiência do usuário na prática.",
   },
 
   items: [
-    {
-      tag: "Projeto",
-      title: "Trabalho de exemplo 1",
-      description:
-        "Use este espaço para explicar brevemente o que está sendo exibido e por que isso é relevante.",
+  {
+    tag: "Projeto real",
+    title: "Arquivapp",
+    description:
+      "Aplicação completa com foco em organização de arquivos, experiência do usuário e estrutura escalável.",
+    image: arquivappImg,
+    imageAlt: "Projeto Arquivapp",
+    link: {
+      label: "Acessar o site",
+      href: "https://arquivapp.com.br",
     },
-    {
-      tag: "Portfólio",
-      title: "Trabalho de exemplo 2",
-      description:
-        "Essa estrutura funciona para imagens institucionais, projetos criativos ou registros profissionais.",
+  },
+  {
+    tag: "Projeto real",
+    title: "Site Professor Ian",
+    description:
+      "Site institucional com foco em apresentação profissional, clareza de serviços e conversão.",
+    image: ianImg,
+    imageAlt: "Site do professor Ian",
+    link: {
+      label: "Acessar o site",
+      href: "https://professor-ian.vercel.app/",
     },
-    {
-      tag: "Destaque",
-      title: "Trabalho de exemplo 3",
-      description:
-        "Aqui você pode mostrar mais um item importante da galeria ou do portfólio.",
-    },
-  ],
+  },
+  {
+    tag: "Em construção",
+    title: "Novos projetos em andamento",
+    description:
+      "Estou desenvolvendo novos projetos com foco em performance, design moderno e experiência do usuário.",
+    image: codingImg,
+    imageAlt: "Projetos em desenvolvimento",
+  },
+],
 };

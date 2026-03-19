@@ -21,10 +21,7 @@ export function Galeria() {
           label: siteConfig.cta.primaryLabel,
           to: siteConfig.cta.primaryTo,
         }}
-        secondaryCta={{
-          label: siteConfig.cta.secondaryLabel,
-          to: siteConfig.cta.secondaryTo,
-        }}
+        
       />
     </>
   );

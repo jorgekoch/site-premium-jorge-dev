@@ -1,16 +1,23 @@
 export const theme = {
   colors: {
-    background: "#0B0B10",
-    backgroundSoft: "#12121A",
-    surface: "#171722",
-    surfaceHover: "#1F1F2B",
-    border: "#2B2B3A",
+    background: "#0A0A0E",
+    backgroundSoft: "#111118",
+    surface: "#15151D",
+    surfaceHover: "#1D1D27",
+    border: "#2A2A36",
+
     text: "#F5F7FA",
     textSoft: "#A9AFC0",
     textMuted: "#7F8599",
-    primary: "#8B5CF6",
-    primaryHover: "#9F75FF",
-    primaryContrast: "#0B0B10",
+
+    // 🔥 NOVA IDENTIDADE
+    primary: "#22C55E",       // verde principal
+    primaryHover: "#16A34A",  // verde mais forte
+    primaryContrast: "#04130A",
+
+    // 🔹 apoio (você pode usar em detalhes, gradientes, etc)
+    accent: "#38BDF8",
+
     danger: "#FF6B6B",
     success: "#4ADE80",
   },
@@ -50,7 +57,9 @@ export const theme = {
   shadow: {
     sm: "0 6px 20px rgba(0, 0, 0, 0.18)",
     md: "0 12px 32px rgba(0, 0, 0, 0.28)",
-    glow: "0 0 0 1px rgba(139, 92, 246, 0.18), 0 10px 30px rgba(139, 92, 246, 0.12)",
+
+    // 🔥 glow atualizado (ANTES era roxo)
+    glow: "0 0 0 1px rgba(34, 197, 94, 0.18), 0 10px 30px rgba(34, 197, 94, 0.12)",
   },
 
   layout: {

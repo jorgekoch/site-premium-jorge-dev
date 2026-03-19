@@ -17,9 +17,9 @@ export function Servicos() {
       />
 
       <FaqSectionBase
-        eyebrow="Dúvidas sobre os serviços"
-        title="Perguntas que ajudam a entender qual formato faz mais sentido"
-        description="Essa seção pode ajudar o cliente a escolher o tipo de site ideal antes do contato."
+        eyebrow="Dúvidas comuns"
+        title="Perguntas que ajudam a escolher o melhor formato"
+        description="Se você ainda não sabe qual tipo de site faz mais sentido para o seu momento, essas respostas podem te ajudar a decidir com mais clareza."
         items={faqData.services}
       />
 
@@ -28,10 +28,13 @@ export function Servicos() {
         title={servicesData.finalCta.title}
         description={servicesData.finalCta.description}
         primaryCta={{
-          label: siteConfig.cta.primaryLabel,
+          label: "Solicitar orçamento",
           to: siteConfig.cta.primaryTo,
         }}
-        secondaryCta={{ label: "Voltar para início", to: "/" }}
+        secondaryCta={{
+          label: "Ver projetos",
+          to: "/galeria",
+        }}
       />
     </>
   );

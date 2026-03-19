@@ -68,12 +68,20 @@ const sharedStyles = css<{ $variant: ButtonVariant }>`
           }
         `
       : css`
-          background: ${theme.colors.primary};
+          background: linear-gradient(
+            135deg,
+            ${theme.colors.primary},
+            ${theme.colors.accent}
+          );
           color: ${theme.colors.primaryContrast};
           box-shadow: ${theme.shadow.glow};
 
           &:hover {
-            background: ${theme.colors.primaryHover};
+            background: linear-gradient(
+              135deg,
+              ${theme.colors.primaryHover},
+              ${theme.colors.accent}
+            );
           }
         `}
 `;

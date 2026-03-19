@@ -24,7 +24,7 @@ const Card = styled.div`
   padding: 1.5rem;
   border-radius: ${({ theme }) => theme.radius.lg};
   background:
-    linear-gradient(180deg, rgba(139, 92, 246, 0.12), rgba(139, 92, 246, 0.03)),
+    linear-gradient(180deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0.03)),
     ${({ theme }) => theme.colors.surface};
   border: 1px solid ${({ theme }) => theme.colors.border};
   box-shadow: ${({ theme }) => theme.shadow.glow};
@@ -52,8 +52,8 @@ const Eyebrow = styled.span`
   width: fit-content;
   padding: 0.45rem 0.9rem;
   border-radius: ${({ theme }) => theme.radius.pill};
-  background: rgba(139, 92, 246, 0.12);
-  border: 1px solid rgba(139, 92, 246, 0.24);
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.24);
   color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes.xs};
   font-weight: 700;
@@ -92,9 +92,9 @@ const Actions = styled.div`
 
 export function ContactCtaBase({
   eyebrow = "Próximo passo",
-  title = "Transforme interesse em ação",
-  description = "Use este bloco para convidar a pessoa a entrar em contato, solicitar orçamento ou iniciar o atendimento.",
-  primaryCta = { label: "Entrar em contato", to: "/contato" },
+  title = "Vamos conversar sobre o seu projeto",
+  description = "Se você quer um site mais profissional, claro e alinhado com o valor do seu trabalho, esse é o próximo passo.",
+  primaryCta = { label: "Solicitar orçamento", to: "/contato" },
   secondaryCta,
 }: ContactCtaBaseProps) {
   return (

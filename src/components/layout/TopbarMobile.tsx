@@ -3,50 +3,125 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { siteConfig } from "../../config/site";
 import { navigationItems } from "../../config/navigation";
+import { media } from "../../styles/breakpoints";
+import logoCompacta from "../../assets/logo-compacta.png";
 
-const Wrapper = styled.header`
+const Header = styled.header`
   position: sticky;
   top: 0;
   z-index: 100;
+  background: rgba(10, 10, 14, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+`;
+
+const Inner = styled.div`
+  width: min(100% - 2rem, ${({ theme }) => theme.layout.contentMaxWidth});
   height: ${({ theme }) => theme.layout.mobileTopbarHeight};
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
-  background: rgba(10, 10, 14, 0.92);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  gap: 1rem;
 
-  @media (min-width: 1024px) {
-    display: none;
+  @media ${media.laptop} {
+    height: 78px;
   }
 `;
 
-const Brand = styled.div`
+const Brand = styled(NavLink)`
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  min-width: 0;
+  flex-shrink: 0;
 `;
 
-const Badge = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: linear-gradient(
-    135deg,
-    ${({ theme }) => theme.colors.primary},
-    #6d45d8
-  );
-  color: ${({ theme }) => theme.colors.primaryContrast};
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  box-shadow: ${({ theme }) => theme.shadow.glow};
+const BrandLogo = styled.img`
+  display: block;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+
+  @media ${media.tablet} {
+    height: 38px;
+  }
+
+  @media ${media.laptop} {
+    height: 46px;
+  }
 `;
 
-const Title = styled.div`
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.text};
+const DesktopNav = styled.nav`
+  display: none;
+
+  @media ${media.laptop} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    flex: 1;
+  }
+`;
+
+const DesktopNavItem = styled(NavLink)`
+  padding: 0.75rem 0.95rem;
+  border-radius: ${({ theme }) => theme.radius.md};
+  color: ${({ theme }) => theme.colors.textSoft};
+  border: 1px solid transparent;
+  font-size: ${({ theme }) => theme.fontSizes.sm};
+  transition: all ${({ theme }) => theme.transitions.default};
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.surface};
+    color: ${({ theme }) => theme.colors.text};
+    border-color: ${({ theme }) => theme.colors.border};
+  }
+
+  &.active {
+    background: ${({ theme }) => theme.colors.surface};
+    color: ${({ theme }) => theme.colors.text};
+    border-color: ${({ theme }) => theme.colors.accent};
+    box-shadow: ${({ theme }) => theme.shadow.glow};
+  }
+`;
+
+const DesktopCta = styled(NavLink)`
+  display: none;
+
+  @media ${media.laptop} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.85rem 1.15rem;
+    border-radius: ${({ theme }) => theme.radius.pill};
+    background: linear-gradient(
+      135deg,
+      ${({ theme }) => theme.colors.primary},
+      ${({ theme }) => theme.colors.accent}
+    );
+    color: ${({ theme }) => theme.colors.primaryContrast};
+    font-weight: 700;
+    font-size: ${({ theme }) => theme.fontSizes.sm};
+    white-space: nowrap;
+    box-shadow: ${({ theme }) => theme.shadow.glow};
+    transition:
+      transform ${({ theme }) => theme.transitions.default},
+      filter ${({ theme }) => theme.transitions.default};
+
+    &:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+    }
+  }
+`;
+
+const MobileActions = styled.div`
+  display: flex;
+
+  @media ${media.laptop} {
+    display: none;
+  }
 `;
 
 const MenuButton = styled.button`
@@ -71,7 +146,7 @@ const Overlay = styled.button<{ $open: boolean }>`
   pointer-events: ${({ $open }) => ($open ? "auto" : "none")};
   transition: opacity ${({ theme }) => theme.transitions.default};
 
-  @media (min-width: 1024px) {
+  @media ${media.laptop} {
     display: none;
   }
 `;
@@ -90,24 +165,23 @@ const MenuPanel = styled.div<{ $open: boolean }>`
   gap: 0.75rem;
 
   opacity: ${({ $open }) => ($open ? 1 : 0)};
-  transform: ${({ $open }) =>
-    $open ? "translateY(0)" : "translateY(-10px)"};
+  transform: ${({ $open }) => ($open ? "translateY(0)" : "translateY(-10px)")};
   pointer-events: ${({ $open }) => ($open ? "auto" : "none")};
   transition:
     opacity ${({ theme }) => theme.transitions.default},
     transform ${({ theme }) => theme.transitions.default};
 
-  @media (min-width: 1024px) {
+  @media ${media.laptop} {
     display: none;
   }
 `;
 
-const Nav = styled.nav`
+const MobileNav = styled.nav`
   display: grid;
   gap: 0.55rem;
 `;
 
-const NavItem = styled(NavLink)`
+const MobileNavItem = styled(NavLink)`
   padding: 0.95rem 1rem;
   border-radius: ${({ theme }) => theme.radius.md};
   color: ${({ theme }) => theme.colors.textSoft};
@@ -123,7 +197,7 @@ const NavItem = styled(NavLink)`
   &.active {
     background: ${({ theme }) => theme.colors.surface};
     color: ${({ theme }) => theme.colors.text};
-    border-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.accent};
     box-shadow: ${({ theme }) => theme.shadow.glow};
   }
 `;
@@ -135,14 +209,18 @@ const BottomText = styled.p`
   margin-top: 0.25rem;
 `;
 
-const CtaLink = styled(NavLink)`
+const MobileCta = styled(NavLink)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 48px;
   padding: 0.9rem 1.2rem;
   border-radius: ${({ theme }) => theme.radius.pill};
-  background: ${({ theme }) => theme.colors.primary};
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.colors.primary},
+    ${({ theme }) => theme.colors.accent}
+  );
   color: ${({ theme }) => theme.colors.primaryContrast};
   font-weight: 700;
   box-shadow: ${({ theme }) => theme.shadow.glow};
@@ -178,12 +256,7 @@ export function TopbarMobile() {
 
   useEffect(() => {
     const previous = document.body.style.overflow;
-
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = previous || "";
-    }
+    document.body.style.overflow = open ? "hidden" : previous || "";
 
     return () => {
       document.body.style.overflow = previous || "";
@@ -200,21 +273,36 @@ export function TopbarMobile() {
 
   return (
     <>
-      <Wrapper>
-        <Brand>
-          <Badge>{siteConfig.brand.initials}</Badge>
-          <Title>{siteConfig.brand.name}</Title>
-        </Brand>
+      <Header>
+        <Inner>
+          <Brand to="/">
+            <BrandLogo src={logoCompacta} alt="Jorge Koch Dev" />
+          </Brand>
 
-        <MenuButton
-          type="button"
-          onClick={handleToggle}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-        >
-          <HamburgerIcon open={open} />
-        </MenuButton>
-      </Wrapper>
+          <DesktopNav>
+            {navigationItems.map((item) => (
+              <DesktopNavItem key={item.path} to={item.path} end={item.path === "/"}>
+                {item.label}
+              </DesktopNavItem>
+            ))}
+          </DesktopNav>
+
+          <DesktopCta to={siteConfig.cta.primaryTo}>
+            {siteConfig.cta.primaryLabel}
+          </DesktopCta>
+
+          <MobileActions>
+            <MenuButton
+              type="button"
+              onClick={handleToggle}
+              aria-label={open ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={open}
+            >
+              <HamburgerIcon open={open} />
+            </MenuButton>
+          </MobileActions>
+        </Inner>
+      </Header>
 
       <Overlay
         type="button"
@@ -224,24 +312,24 @@ export function TopbarMobile() {
       />
 
       <MenuPanel $open={open}>
-        <Nav>
+        <MobileNav>
           {navigationItems.map((item) => (
-            <NavItem
+            <MobileNavItem
               key={item.path}
               to={item.path}
               end={item.path === "/"}
               onClick={handleClose}
             >
               {item.label}
-            </NavItem>
+            </MobileNavItem>
           ))}
-        </Nav>
+        </MobileNav>
 
         <BottomText>{siteConfig.footer.note}</BottomText>
 
-        <CtaLink to={siteConfig.cta.primaryTo} onClick={handleClose}>
+        <MobileCta to={siteConfig.cta.primaryTo} onClick={handleClose}>
           {siteConfig.cta.primaryLabel}
-        </CtaLink>
+        </MobileCta>
       </MenuPanel>
     </>
   );

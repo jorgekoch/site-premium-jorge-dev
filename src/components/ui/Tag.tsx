@@ -9,8 +9,8 @@ export const Tag = styled.span`
   white-space: nowrap;
   padding: 0.45rem 0.9rem;
   border-radius: ${({ theme }) => theme.radius.pill};
-  background: rgba(139, 92, 246, 0.12);
-  border: 1px solid rgba(139, 92, 246, 0.24);
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.24);
   color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes.xs};
   font-weight: 700;

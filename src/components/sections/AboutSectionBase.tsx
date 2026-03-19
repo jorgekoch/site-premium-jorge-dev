@@ -46,10 +46,15 @@ const Column = styled.div`
 
 const HighlightCard = styled(Card)`
   display: grid;
-  gap: 1rem;
+  gap: 1.15rem;
+  padding: 1.6rem;
   background:
-    linear-gradient(180deg, rgba(139, 92, 246, 0.08), rgba(139, 92, 246, 0.03)),
+    linear-gradient(180deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.03)),
     ${({ theme }) => theme.colors.surface};
+
+    @media ${media.tablet} {
+      padding: 1.9rem;
+    }
 `;
 
 const Title = styled.h3`
@@ -58,13 +63,15 @@ const Title = styled.h3`
 `;
 
 const SubTitle = styled.h4`
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.35;
+  letter-spacing: -0.01em;
 `;
 
 const Text = styled.p`
   color: ${({ theme }) => theme.colors.textSoft};
-  line-height: 1.8;
+  line-height: 1.85;
+  max-width: 68ch;
 `;
 
 const BulletList = styled.ul`
@@ -116,8 +123,10 @@ const ImageCard = styled.div`
   border-radius: ${({ theme }) => theme.radius.lg};
   overflow: hidden;
   border: 1px solid ${({ theme }) => theme.colors.border};
-  background: ${({ theme }) => theme.colors.surface};
-  box-shadow: ${({ theme }) => theme.shadow.md};
+  background: #000; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media ${media.tablet} {
     min-height: 340px;
@@ -129,9 +138,9 @@ const ImageCard = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
   display: block;
 `;
 

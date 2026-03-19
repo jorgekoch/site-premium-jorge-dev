@@ -21,30 +21,30 @@ export type HomeData = {
 
 export const homeData: HomeData = {
   hero: {
-    eyebrow: "Serviço profissional",
-    title: "Título principal do site",
+    eyebrow: "Desenvolvimento de sites modernos",
+    title: "Seu site não pode ser só bonito. Ele precisa gerar resultado.",
     description:
-      "Uma descrição clara e estratégica explicando o que você faz e como ajuda seu público.",
+      "Eu crio sites profissionais, rápidos e estratégicos para profissionais e pequenos negócios que querem se posicionar melhor e transformar visitantes em clientes.",
     highlights: [
       {
-        title: "Diferencial 1",
-        text: "Explicação curta sobre esse diferencial.",
+        title: "Visual profissional",
+        text: "Design moderno que transmite confiança desde o primeiro acesso.",
       },
       {
-        title: "Diferencial 2",
-        text: "Explicação curta sobre esse diferencial.",
+        title: "Foco em conversão",
+        text: "Estrutura pensada para gerar contato e oportunidades reais.",
       },
       {
-        title: "Diferencial 3",
-        text: "Explicação curta sobre esse diferencial.",
+        title: "Tecnologia moderna",
+        text: "Sites rápidos, responsivos e construídos com boas práticas.",
       },
     ],
   },
 
   finalCta: {
     eyebrow: "Próximo passo",
-    title: "Use essa base para tirar projetos do papel com mais rapidez e consistência",
+    title: "Vamos tirar seu projeto do papel?",
     description:
-      "Agora que a estrutura central está pronta, você pode começar a personalizar o starter kit para o seu próprio site e, depois, para os próximos clientes.",
+      "Se você quer um site mais profissional, estratégico e alinhado com o valor do seu trabalho, vamos conversar sobre o seu projeto.",
   },
 };

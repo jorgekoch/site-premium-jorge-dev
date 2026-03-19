@@ -22,25 +22,25 @@ export type SiteConfig = {
 
 export const siteConfig: SiteConfig = {
   brand: {
-    name: "Seu Nome ou Marca",
-    initials: "SN",
-    tagline: "Uma frase curta explicando o que você faz de forma profissional.",
+    name: "Jorge Koch",
+    initials: "JK",
+    tagline: "Sites modernos e estratégicos.",
   },
 
   contact: {
-    whatsapp: "https://wa.me/5541999999999",
-    instagram: "https://instagram.com/seuperfil",
-    email: "contato@seudominio.com",
+    whatsapp: "https://wa.me/5547999632405?text=Olá,%20vim%20pelo%20seu%20site%20e%20quero%20falar%20sobre%20um%20projeto.",
+    instagram: "https://instagram.com/jorge_koch",
+    email: "jorgeluizkoch@gmail.com",
   },
 
   cta: {
-    primaryLabel: "Entrar em contato",
+    primaryLabel: "Solicitar projeto",
     primaryTo: "/contato",
-    secondaryLabel: "Ver serviços",
-    secondaryTo: "/servicos",
+    secondaryLabel: "Ver projetos",
+    secondaryTo: "/galeria",
   },
 
   footer: {
-    note: "Estrutura moderna, visual profissional e foco total em clareza e conversão.",
+    note: "Sites modernos, responsivos e pensados para transmitir profissionalismo e gerar resultado.",
   },
 };

@@ -17,20 +17,20 @@ export type ContactPageData = {
 export const contactPageData: ContactPageData = {
   section: {
     eyebrow: "Contato",
-    title: "Dê o próximo passo e inicie a conversa",
+    title: "Vamos conversar sobre o seu projeto",
     description:
-      "Esta página foi pensada para facilitar o contato, reduzir dúvidas e tornar o início do projeto mais natural.",
+      "Se você quer um site mais profissional, claro e alinhado com o valor do seu trabalho, esse é o próximo passo.",
   },
 
   direct: {
-    title: "Fale diretamente",
+    title: "Fale diretamente comigo",
     text:
-      "Use este espaço para transformar interesse em conversa. O ideal é deixar o caminho simples, direto e confortável para o cliente.",
+      "O caminho mais rápido é pelo WhatsApp. Você pode me explicar sua ideia, tirar dúvidas e entender qual formato de site faz mais sentido para o seu caso.",
   },
 
   social: {
-    title: "Redes e presença online",
+    title: "Outros canais",
     text:
-      "Aqui você pode centralizar canais complementares para reforçar sua presença digital e permitir que o visitante conheça melhor o seu trabalho.",
+      "Se preferir, você também pode entrar em contato pelas redes sociais e acompanhar meu trabalho por lá.",
   },
 };

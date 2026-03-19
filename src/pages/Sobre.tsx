@@ -4,6 +4,7 @@ import { ContactCtaBase } from "../components/sections/ContactCtaBase";
 import { siteConfig } from "../config/site";
 import { aboutData } from "../data/about";
 import { authorityData } from "../data/authority";
+import logo from "../assets/logo.jpeg";
 
 export function Sobre() {
   return (
@@ -19,13 +20,15 @@ export function Sobre() {
         sideTag={aboutData.content.sideTag}
         sideTitle={aboutData.content.sideTitle}
         sideItems={aboutData.content.sideItems}
-        showImage={false}
+        image={logo}
+        imageAlt="Logo Jorge Koch Dev"
+        showImage={true}
       />
 
       <AuthoritySectionBase
         eyebrow="Confiança"
-        title="Elementos que fortalecem a percepção de valor"
-        description="Depois da narrativa principal, essa seção pode destacar rapidamente fatores que validam experiência, método e posicionamento."
+        title="Pontos que reforçam meu jeito de construir projetos"
+        description="Além da trajetória, esses elementos ajudam a mostrar como penso estrutura, experiência do usuário e posicionamento em cada projeto."
         items={authorityData.about}
       />
 

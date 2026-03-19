@@ -18,7 +18,7 @@ const Grid = styled.div`
   gap: 1rem;
 
   @media ${media.tablet} {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.1fr 0.9fr;
   }
 `;
 
@@ -29,6 +29,7 @@ const ContactCard = styled(Card)`
 
 const Title = styled.h3`
   font-size: 1.15rem;
+  line-height: 1.3;
 `;
 
 const Text = styled.p`
@@ -94,11 +95,9 @@ export function Contato() {
                   Instagram
                 </SocialLink>
 
-                {siteConfig.contact.email && (
-                  <SocialLink href={`mailto:${siteConfig.contact.email}`}>
-                    {siteConfig.contact.email}
-                  </SocialLink>
-                )}
+                <SocialLink href={`mailto:${siteConfig.contact.email}`}>
+                  {siteConfig.contact.email}
+                </SocialLink>
               </LinkList>
             </ContactCard>
           </Grid>
@@ -107,8 +106,8 @@ export function Contato() {
 
       <FaqSectionBase
         eyebrow="Dúvidas comuns"
-        title="Perguntas que costumam surgir antes do contato"
-        description="Esses pontos ajudam a tornar o processo mais claro e confortável para quem está avaliando o próximo passo."
+        title="Perguntas que podem surgir antes do contato"
+        description="Esses pontos ajudam a tornar a decisão mais leve e o próximo passo mais natural."
         items={faqData.contact}
       />
     </>

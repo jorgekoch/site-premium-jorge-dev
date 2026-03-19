@@ -31,21 +31,21 @@ export type ServicesData = {
 export const servicesData: ServicesData = {
   section: {
     eyebrow: "Serviços",
-    title: "Soluções pensadas para criar sites mais profissionais e estratégicos",
+    title: "Soluções pensadas para diferentes momentos e objetivos",
     description:
-      "Uma estrutura adaptável para diferentes objetivos, desde uma landing page enxuta até um site institucional mais completo.",
+      "Do site mais enxuto até uma estrutura mais estratégica e refinada, cada projeto é pensado para transmitir profissionalismo, clareza e gerar resultado.",
   },
 
   items: [
     {
       tag: "Essencial",
-      title: "Landing page profissional",
+      title: "Landing Page",
       description:
-        "Ideal para apresentar um serviço principal, mostrar diferenciais e facilitar o contato com uma estrutura simples e eficiente.",
+        "Uma página única, direta e profissional para apresentar seu serviço, destacar seus diferenciais e facilitar o contato.",
       bullets: [
-        "Página única com foco em conversão",
-        "Visual moderno e responsivo",
-        "CTA claro para WhatsApp ou formulário",
+        "Estrutura enxuta e objetiva",
+        "Ideal para quem quer começar bem",
+        "Foco total em clareza e conversão",
       ],
       cta: {
         label: "Quero uma landing page",
@@ -55,38 +55,38 @@ export const servicesData: ServicesData = {
     },
     {
       tag: "Profissional",
-      title: "Site institucional",
+      title: "Site Institucional",
       description:
-        "Uma estrutura com múltiplas páginas para fortalecer posicionamento, explicar serviços com clareza e transmitir mais credibilidade.",
+        "Uma estrutura mais completa para apresentar melhor sua marca, seus serviços e fortalecer sua presença online.",
       bullets: [
-        "Home, Sobre, Serviços e Contato",
-        "Navegação mais completa",
-        "Mais autoridade para a marca ou profissional",
+        "Múltiplas seções ou páginas",
+        "Mais organização de conteúdo",
+        "Mais autoridade e percepção de valor",
       ],
       cta: {
-        label: "Quero um site institucional",
+        label: "Quero um site profissional",
         to: "/contato",
       },
     },
     {
       tag: "Premium",
-      title: "Refino visual e UX",
+      title: "Site Estratégico",
       description:
-        "Melhorias de interface, hierarquia visual e experiência do usuário para criar uma presença online mais sofisticada e mais eficiente.",
+        "Uma solução mais refinada para quem quer unir design, posicionamento e experiência do usuário em um projeto mais forte.",
       bullets: [
-        "Layout mais elegante",
-        "Mais clareza e escaneabilidade",
-        "Melhor percepção de valor",
+        "Estrutura mais estratégica",
+        "Refino visual e melhor experiência",
+        "Mais impacto, mais clareza e mais valor percebido",
       ],
       cta: {
-        label: "Solicitar orçamento",
+        label: "Quero esse nível",
         to: "/contato",
       },
     },
   ],
 
   sectionCta: {
-    label: "Falar sobre meu projeto",
+    label: "Solicitar orçamento",
     to: "/contato",
   },
 
@@ -94,6 +94,6 @@ export const servicesData: ServicesData = {
     eyebrow: "Vamos conversar",
     title: "Encontre o formato ideal para o seu projeto",
     description:
-      "Entre em contato para entender qual estrutura faz mais sentido para o seu objetivo e como podemos transformar isso em um site mais forte e profissional.",
+      "Se você quer entender qual tipo de site faz mais sentido para o seu momento, posso te ajudar a definir a melhor direção e o melhor nível de investimento.",
   },
 };
