@@ -117,7 +117,7 @@ const Image = styled.img`
   }
 `;
 
-const Overlay = styled.div.attrs({ "data-overlay": "true" })`
+const Overlay = styled.div`
   position: absolute;
   inset: 0;
   display: flex;
@@ -133,7 +133,7 @@ const Overlay = styled.div.attrs({ "data-overlay": "true" })`
     background ${({ theme }) => theme.transitions.default};
 `;
 
-const OverlayText = styled.span.attrs({ "data-overlay-text": "true" })`
+const OverlayText = styled.span`
   padding: 0.8rem 1.1rem;
   border-radius: ${({ theme }) => theme.radius.pill};
   background: rgba(255, 255, 255, 0.08);
@@ -221,8 +221,8 @@ export function GallerySectionBase({
                           src={item.image}
                           alt={item.imageAlt || item.title || ""}
                         />
-                        <Overlay>
-                          <OverlayText>
+                        <Overlay data-overlay="true">
+                          <OverlayText data-overlay-text="true">
                             {item.link.label || "Acessar o site"}
                           </OverlayText>
                         </Overlay>
